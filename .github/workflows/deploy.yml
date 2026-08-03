@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./site
+    working-directory: site
 
 jobs:
   deploy:
