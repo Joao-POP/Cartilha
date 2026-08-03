@@ -1,0 +1,19 @@
+name: Deploy to FTP server
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: ./site
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install expect
+        run: sudo apt install -y expect
+      - name: Copy files to server
+        run: expect -c 'spawn ftp ftp://${{secrets.FTP_USERNAME}}:${{secrets.FTP_PASSWORD}}@ftpupload.net ; expect "ftp> " ; send "cd htdocs\r" ; expect "ftp> " ; send "put *.html\r" ; expect "ftp> " ; send "put *.js\r" ; expect "ftp> " ; send "put styles/*.css\r" ; expect "ftp> " ; send "bye\r" '
