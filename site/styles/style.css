@@ -1,5 +1,8 @@
 body {
     font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2 {
@@ -8,8 +11,15 @@ h1, h2 {
 
 h1 {
     font-size: calc(16px + 8vw);
+    margin-top: calc(4px + 8vw);
+    margin-bottom: calc(4px + 2vw);
 }
 
 h2 {
     font-size: calc(10px + 5vw);
+}
+
+#player {
+    align-self: center;
+    margin-top: calc(10px + 1vw);
 }
