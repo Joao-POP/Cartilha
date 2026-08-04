@@ -1,25 +1,99 @@
 body {
     font-family: sans-serif;
+    background-color: rgb(247, 247, 247);
     margin: 0;
+}
+
+h1 {
+    font-size: calc(16px + 20vw);
+    line-height: 0.8;
+    text-align: justify;
+    margin-top: calc(40px + 7vw);
+    margin-bottom: calc(1px + 1vw);
+}
+
+h2 {
+    font-size: calc(15px + 7vw);
+    font-weight: 100;
+    text-align: end;
+    margin-top: calc(10px + 1vw);
+
+    span {
+        text-decoration: dotted underline rgb(15, 15, 15);
+    }
+}
+
+main {
     display: flex;
     flex-direction: column;
 }
 
-h1, h2 {
-    text-align: center;
+footer {
+    background-color: rgb(30, 30, 30);
 }
 
-h1 {
-    font-size: calc(16px + 8vw);
-    margin-top: calc(4px + 8vw);
-    margin-bottom: calc(4px + 2vw);
+a {
+    color: green;
+    font-family: monospace;
+    font-size: 20px;
 }
 
-h2 {
-    font-size: calc(10px + 5vw);
+.info {
+    margin: 15px 5px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.info.open > p {
+    display: block;
+}
+
+.info.open > header .chevron {
+    transform: rotate(90deg);
+}
+
+.info header {
+    font-size: calc(12px + 3vw);
+    font-weight: bold;
+    margin: 5px 0px;
+    display: flex;
+}
+
+.info p {
+    font-size: calc(15px + 2vw);
+    color: rgb(20, 20, 20);
+    display: none;
+    line-height: 1.5;
+    padding: 15px;
+    margin: 0px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(20, 20, 20);
+}
+
+.chevron {
+    height: calc(10px + 0.4vw);
+    margin: 5px 10px;
+    transition: transform 0.1s linear;
+    align-self: center;
 }
 
 #player {
     align-self: center;
     margin-top: calc(10px + 1vw);
+}
+
+#spinner-and-subheading {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+
+#if-logo {
+    width: 90vw;
+    margin: 5px;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-top: 20px;
 }
