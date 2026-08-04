@@ -18,4 +18,4 @@ jobs:
       - name: Install expect
         run: sudo apt install -y expect
       - name: Copy files to server
-        run: expect -c 'spawn ftp ftp://${{secrets.FTP_USERNAME}}:${{secrets.FTP_PASSWORD}}@ftpupload.net ; expect "ftp> " ; send "cd htdocs\r" ; expect "ftp> " ; send "put index.html\r" ; expect "ftp> " ; send "put main.js\r" ; expect "ftp> " ; send "put player.js\r" ; expect "ftp> " ; send "put styles/style.css\r" ; expect "ftp> " ; send "put assets/chevron.svg\r" ; expect "ftp> " ; send "put assets/chevron-dark-mode.svg\r" ; expect "ftp> " ; send "put logo_ifrn_zn_neg.png\r" ; expect "ftp> " ; send "bye\r" '
+        run: expect -c 'spawn ftp ftp://${{secrets.FTP_USERNAME}}:${{secrets.FTP_PASSWORD}}@ftpupload.net ; expect "ftp> " ; send "cd htdocs\r" ; expect "ftp> " ; send "put index.html\r" ; expect "ftp> " ; send "put main.js\r" ; expect "ftp> " ; send "put player.js\r" ; expect "ftp> " ; send "put styles/style.css\r" ; expect "ftp> " ; send "put assets/chevron.svg\r" ; expect "ftp> " ; send "put assets/chevron-dark-mode.svg\r" ; expect "ftp> " ; send "put assets/logo_ifrn_zn_neg.png\r" ; expect "ftp> " ; send "bye\r" '
