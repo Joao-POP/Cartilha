@@ -113,7 +113,8 @@ a:hover {
 }
 
 #player {
-    align-self: center;
+    aspect-ratio: 16 / 9;
+    width: 100%;
 }
 
 #spinner-and-subheading {
