@@ -39,9 +39,8 @@ header img {
 }
 
 footer {
-    background-color: rgb(30, 30, 30);
+    background-color: black;
     background-image: url("../assets/wavy-background.svg");
-    border-radius: 20px 20px 0px 0px;
     width: 100%;
 }
 
