@@ -1,31 +1,41 @@
 body {
     font-family: sans-serif;
-    background-color: rgb(247, 247, 247);
+    background-color: white;
     margin: 0;
 }
 
-h1 {
-    font-size: calc(16px + 20vw);
-    line-height: 0.8;
-    text-align: justify;
-    margin-top: calc(40px + 7vw);
-    margin-bottom: calc(1px + 1vw);
-}
-
-h2 {
-    font-size: calc(15px + 7vw);
-    font-weight: 100;
-    text-align: end;
-    margin-top: calc(10px + 1vw);
-
-    span {
-        text-decoration: dotted underline rgb(15, 15, 15);
+header {
+    h1, h2 {
+        color: white;
     }
 }
 
-main {
-    display: flex;
-    flex-direction: column;
+header h1 {
+    font-size: 6rem;
+    line-height: 0.8;
+    text-align: justify;
+    margin: 30px 10px;
+    font-weight: 300;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header h2 {
+    font-size: 2.8rem;
+    font-weight: 100;
+    text-align: end;
+    margin: 30px 10px;
+
+    span {
+        text-decoration: dotted underline;
+        text-decoration-color: inherit;
+    }
+}
+
+header img {
+    display: block;
 }
 
 footer {
@@ -47,9 +57,18 @@ a:hover {
     color: green;
 }
 
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 700px;
+}
+
 .info {
     margin: 15px 5px;
-    box-shadow: 1px 1px 3px grey;
+    background-color: white;
+    flex: 1;
+    align-self: flex-end;
 }
 
 .info.open > p {
@@ -60,10 +79,12 @@ a:hover {
     transform: rotate(90deg);
 }
 
-.info header {
-    font-size: calc(12px + 3vw);
+.info h1 {
+    font-size: 1.2rem;
     font-weight: bold;
-    margin: 5px 0px;
+    padding: 10px;
+    margin: 3px;
+    line-height: 1.5;
     display: flex;
 }
 
@@ -87,17 +108,24 @@ a:hover {
 
 .open-in-new-tab {
     width: 14px;
-    margin: 0;
+    display: inline;
+    position: relative;
+    top: 2px;
 }
 
 #player {
     align-self: center;
-    margin-top: calc(10px + 1vw);
+    margin-left: calc(2px);
 }
 
 #spinner-and-subheading {
     display: grid;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 4fr 6fr;
+
+    position: absolute;
+    top: 200px;
+    left: 0;
+
 }
 
 #if-logo {
@@ -112,4 +140,28 @@ a:hover {
     margin: 20px;
     padding-top: 20px;
     margin-bottom: 10px;
+}
+
+#main-background {
+    z-index: -1;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#lander {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+#attribution {
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    display: block;
 }
