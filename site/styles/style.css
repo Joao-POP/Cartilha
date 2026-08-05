@@ -30,6 +30,9 @@ main {
 
 footer {
     background-color: rgb(30, 30, 30);
+    background-image: url("../assets/wavy-background.svg");
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
 }
 
 a {
@@ -100,6 +103,7 @@ a:hover {
 #if-logo {
     width: 60vw;
     margin: 20px;
+    margin-top: 0px;
 }
 
 #links {
@@ -107,4 +111,5 @@ a:hover {
     flex-direction: column;
     margin: 20px;
     padding-top: 20px;
+    margin-bottom: 10px;
 }
