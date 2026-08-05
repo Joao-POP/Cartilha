@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-    color: green;
+    color: lightblue;
 }
 
 .content {
@@ -74,7 +74,7 @@ a:hover {
     display: block;
 }
 
-.info.open > header .chevron {
+.info.open > h1 .chevron {
     transform: rotate(90deg);
 }
 
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .info p {
-    font-size: calc(15px + 2vw);
+    font-size: 1rem;
     color: rgb(20, 20, 20);
     display: none;
     line-height: 1.5;
@@ -99,7 +99,7 @@ a:hover {
 }
 
 .chevron {
-    height: calc(10px + 0.4vw);
+    height: 1rem;
     margin: 5px 10px;
     transition: transform 0.1s linear;
     align-self: center;
@@ -114,7 +114,6 @@ a:hover {
 
 #player {
     align-self: center;
-    margin-left: calc(2px);
 }
 
 #spinner-and-subheading {
