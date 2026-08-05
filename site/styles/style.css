@@ -33,9 +33,15 @@ footer {
 }
 
 a {
-    color: green;
-    font-family: monospace;
+    color: lightgrey;
     font-size: 20px;
+    padding: 8px 0px;
+    transition: color 0.2s linear;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
 }
 
 .info {
@@ -76,6 +82,11 @@ a {
     align-self: center;
 }
 
+.open-in-new-tab {
+    width: 14px;
+    margin: 0;
+}
+
 #player {
     align-self: center;
     margin-top: calc(10px + 1vw);
@@ -87,8 +98,8 @@ a {
 }
 
 #if-logo {
-    width: 90vw;
-    margin: 5px;
+    width: 60vw;
+    margin: 20px;
 }
 
 #links {
