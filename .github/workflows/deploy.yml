@@ -18,4 +18,4 @@ jobs:
       - name: Install expect
         run: sudo apt install -y expect
       - name: Copy files to server
-        run: expect -c '$(bash ../scripts/generate-expect-script.sh ${{secrets.FTP_USERNAME}} ${{secrets.FTP_PASSWORD}})'
+        run: expect -f <(bash ../scripts/generate-expect-script.sh ${{secrets.FTP_USERNAME}} ${{secrets.FTP_PASSWORD}})
